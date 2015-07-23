@@ -21,7 +21,7 @@ function Fridge(power) {
 
     var food = [];
 
-    this.addFood = function(item) {
+    this.addFood = function() {
         if (!this._enabled) {
             throw new Error('Fridge is not working. Please, enable it.');
         }
@@ -29,7 +29,9 @@ function Fridge(power) {
             throw new Error('So much food. Not enough power.');
         }
         else {
-            food.push(item);
+            for (var i = 0; i < arguments.length; i++) {
+                food.push(arguments[i]); // it will add all parameters to the food array
+            }
         }
     };
 
