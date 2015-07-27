@@ -3,6 +3,7 @@
  */
 function CoffeeMachine(power) {
     this._power = power;
+
     this._waterAmount = 0;
 }
 
